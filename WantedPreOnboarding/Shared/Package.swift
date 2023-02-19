@@ -10,6 +10,14 @@ let package = Package(
         .library(
             name: "ImageDownloader",
             targets: ["ImageDownloader"]
+        ),
+        .library(
+            name: "UIViewUtil",
+            targets: ["UIViewUtil"]
+        ),
+        .library(
+            name: "CombineUtil",
+            targets: ["CombineUtil"]
         )
     ],
     dependencies: [
@@ -19,6 +27,8 @@ let package = Package(
         .target(
             name: "ImageDownloader",
             dependencies: []
-        )
+        ),
+        .target(name: "UIViewUtil"),
+        .target(name: "CombineUtil")
     ]
 )

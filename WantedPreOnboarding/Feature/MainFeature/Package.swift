@@ -17,14 +17,18 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(path: "./BaseFeature")
+        .package(path: "./BaseFeature"),
+        .package(path: "../Shared")
     ],
     targets: [
         .target(
             name: "MainFeature",
             dependencies: [
                 "MainFeatureInterface",
-                .product(name: "BaseFeature", package: "BaseFeature")
+                .product(name: "BaseFeature", package: "BaseFeature"),
+                .product(name: "CombineUtil", package: "Shared"),
+                .product(name: "ImageDownloader", package: "Shared"),
+                .product(name: "UIViewUtil", package: "Shared")
             ]
         ),
         .target(name: "MainFeatureInterface"),
