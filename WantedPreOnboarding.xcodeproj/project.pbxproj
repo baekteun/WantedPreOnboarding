@@ -22,6 +22,7 @@
 		46A37CCD29A1FF7000FE1310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46A37CD029A1FF7000FE1310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46A37CD229A1FF7000FE1310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46A37CDC29A200FD00FE1310 /* BaseFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BaseFeature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		46A37CC329A1FF6F00FE1310 /* WantedPreOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				46A37CDB29A200D600FE1310 /* Feature */,
 				46A37CDA29A200A700FE1310 /* Support */,
 				46A37CD929A2006900FE1310 /* Resources */,
 				46A37CD829A1FFA200FE1310 /* App */,
@@ -86,6 +88,14 @@
 				46A37CD229A1FF7000FE1310 /* Info.plist */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		46A37CDB29A200D600FE1310 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				46A37CDC29A200FD00FE1310 /* BaseFeature */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
