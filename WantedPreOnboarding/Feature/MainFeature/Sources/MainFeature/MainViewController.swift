@@ -45,7 +45,7 @@ final class MainViewController: BaseViewController<MainViewModel> {
     override func bind() {
         loadAllImageButton.tapPublisher
             .sink { [weak self] _ in
-                self?.imageLoadViews.forEach { $0.loadImage() }
+                self?.imageLoadViews.forEach { $0.loadSubject.send(()) }
             }
             .store(in: &bag)
     }

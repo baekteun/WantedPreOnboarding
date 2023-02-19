@@ -8,6 +8,8 @@ final class MainImageView: UIStackView {
 
     // MARK: - Properties
 
+    public var loadSubject = PassthroughSubject<Void, Never>()
+
     private let url: URL
     private let imageView = UIImageView(image: .init(systemName: "photo"))
     private let progressView: UIProgressView = {
@@ -61,28 +63,19 @@ final class MainImageView: UIStackView {
 
     private func bind() {
         loadButton.tapPublisher
-            .handleEvents(receiveOutput: { [weak self] _ in
-                guard let self = self else { return }
-                self.imageView.image = .init(systemName: "photo")
-            })
             .sink { [weak self] image in
-                guard let self = self else { return }
-                self.loadImage()
+                self?.loadSubject.send(())
             }
             .store(in: &bag)
-    }
 
-    // MARK: - Public
-
-    public func loadImage() {
-        ImageDownloader.shared.loadImage(from: url)
+        loadSubject
             .handleEvents(receiveOutput: { [weak self] _ in
-                guard let self = self else { return }
-                self.imageView.image = .init(systemName: "photo")
+                self?.imageView.image = .init(systemName: "photo")
             })
+            .compactMap { [weak self] in return self?.url }
+            .flatMap { ImageDownloader.shared.loadImage(from: $0) }
             .sink { [weak self] image in
-                guard let self = self else { return }
-                self.imageView.image = image
+                self?.imageView.image = image
             }
             .store(in: &bag)
     }
