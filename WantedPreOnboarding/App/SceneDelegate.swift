@@ -1,3 +1,5 @@
+import MainFeatureInterface
+import MainFeature
 import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -8,7 +10,12 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = .init(windowScene: scene)
+        let mainFeatureFactory: any MainFeatureFactory = MainFeatureFactoryImpl()
+
+        window?.rootViewController = mainFeatureFactory.makeViewController()
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }

@@ -12,6 +12,8 @@
 		46A37CCC29A1FF6F00FE1310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A37CCA29A1FF6F00FE1310 /* Main.storyboard */; };
 		46A37CCE29A1FF7000FE1310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A37CCD29A1FF7000FE1310 /* Assets.xcassets */; };
 		46A37CD129A1FF7000FE1310 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A37CCF29A1FF7000FE1310 /* LaunchScreen.storyboard */; };
+		46A37CE029A2057000FE1310 /* MainFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 46A37CDF29A2057000FE1310 /* MainFeature */; };
+		46A37CE229A2057000FE1310 /* MainFeatureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = 46A37CE129A2057000FE1310 /* MainFeatureInterface */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A37CE229A2057000FE1310 /* MainFeatureInterface in Frameworks */,
+				46A37CE029A2057000FE1310 /* MainFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +46,7 @@
 			children = (
 				46A37CC329A1FF6F00FE1310 /* WantedPreOnboarding */,
 				46A37CC229A1FF6F00FE1310 /* Products */,
+				46A37CDE29A2057000FE1310 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +105,13 @@
 			path = Feature;
 			sourceTree = "<group>";
 		};
+		46A37CDE29A2057000FE1310 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +128,10 @@
 			dependencies = (
 			);
 			name = WantedPreOnboarding;
+			packageProductDependencies = (
+				46A37CDF29A2057000FE1310 /* MainFeature */,
+				46A37CE129A2057000FE1310 /* MainFeatureInterface */,
+			);
 			productName = WantedPreOnboarding;
 			productReference = 46A37CC129A1FF6F00FE1310 /* WantedPreOnboarding.app */;
 			productType = "com.apple.product-type.application";
@@ -324,7 +340,6 @@
 				INFOPLIST_FILE = WantedPreOnboarding/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -352,7 +367,6 @@
 				INFOPLIST_FILE = WantedPreOnboarding/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -390,6 +404,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46A37CDF29A2057000FE1310 /* MainFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MainFeature;
+		};
+		46A37CE129A2057000FE1310 /* MainFeatureInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MainFeatureInterface;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46A37CB929A1FF6F00FE1310 /* Project object */;
 }
