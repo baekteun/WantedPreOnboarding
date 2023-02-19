@@ -26,6 +26,7 @@
 		46A37CD229A1FF7000FE1310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46A37CDC29A200FD00FE1310 /* BaseFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BaseFeature; sourceTree = "<group>"; };
 		46A37CDD29A2035500FE1310 /* MainFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MainFeature; sourceTree = "<group>"; };
+		46A37CE329A20B1C00FE1310 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Shared; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		46A37CC329A1FF6F00FE1310 /* WantedPreOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				46A37CE329A20B1C00FE1310 /* Shared */,
 				46A37CDB29A200D600FE1310 /* Feature */,
 				46A37CDA29A200A700FE1310 /* Support */,
 				46A37CD929A2006900FE1310 /* Resources */,
