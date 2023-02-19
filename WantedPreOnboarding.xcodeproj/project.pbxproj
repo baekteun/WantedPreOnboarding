@@ -54,9 +54,9 @@
 		46A37CC329A1FF6F00FE1310 /* WantedPreOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				46A37CDA29A200A700FE1310 /* Support */,
 				46A37CD929A2006900FE1310 /* Resources */,
 				46A37CD829A1FFA200FE1310 /* App */,
-				46A37CD229A1FF7000FE1310 /* Info.plist */,
 			);
 			path = WantedPreOnboarding;
 			sourceTree = "<group>";
@@ -78,6 +78,14 @@
 				46A37CCA29A1FF6F00FE1310 /* Main.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		46A37CDA29A200A700FE1310 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				46A37CD229A1FF7000FE1310 /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +309,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 235C2RVZ7L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WantedPreOnboarding/Info.plist;
+				INFOPLIST_FILE = WantedPreOnboarding/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -329,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 235C2RVZ7L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WantedPreOnboarding/Info.plist;
+				INFOPLIST_FILE = WantedPreOnboarding/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
