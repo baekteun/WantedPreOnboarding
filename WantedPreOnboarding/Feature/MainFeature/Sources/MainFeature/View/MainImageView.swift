@@ -8,7 +8,7 @@ final class MainImageView: UIStackView {
 
     // MARK: - Properties
 
-    public var loadSubject = PassthroughSubject<Void, Never>()
+    public let loadSubject = PassthroughSubject<Void, Never>()
 
     private let url: URL
     private let imageView = UIImageView(image: .init(systemName: "photo"))
