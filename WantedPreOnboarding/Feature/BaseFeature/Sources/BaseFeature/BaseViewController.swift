@@ -1,6 +1,6 @@
 import UIKit
 
-open class BaseViewController: UIViewController {
+open class BaseViewController: UIViewController, BoundsProvidable {
 
     // MARK: - Lifecycle
 
