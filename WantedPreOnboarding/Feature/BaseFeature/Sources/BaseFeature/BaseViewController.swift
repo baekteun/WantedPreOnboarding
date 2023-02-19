@@ -1,6 +1,10 @@
+import Combine
 import UIKit
 
 open class BaseViewController: UIViewController, BoundsProvidable {
+
+    // MARK: - Properties
+    public var bag = Set<AnyCancellable>()
 
     // MARK: - Lifecycle
 
