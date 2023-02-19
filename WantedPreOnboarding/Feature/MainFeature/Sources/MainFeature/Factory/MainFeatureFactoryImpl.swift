@@ -5,6 +5,7 @@ public struct MainFeatureFactoryImpl: MainFeatureFactory {
     public init() { }
 
     public func makeViewController() -> UIViewController {
-        MainViewController()
+        let viewModel = MainViewModel()
+        return MainViewController(viewModel: viewModel)
     }
 }

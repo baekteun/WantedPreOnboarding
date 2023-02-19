@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "MainFeature",
+    platforms: [.iOS(.v15)],
     products: [
         .library(
             name: "MainFeature",
@@ -16,12 +17,15 @@ let package = Package(
         )
     ],
     dependencies: [
-        
+        .package(path: "./BaseFeature")
     ],
     targets: [
         .target(
             name: "MainFeature",
-            dependencies: ["MainFeatureInterface"]
+            dependencies: [
+                "MainFeatureInterface",
+                .product(name: "BaseFeature", package: "BaseFeature")
+            ]
         ),
         .target(name: "MainFeatureInterface"),
         .testTarget(
