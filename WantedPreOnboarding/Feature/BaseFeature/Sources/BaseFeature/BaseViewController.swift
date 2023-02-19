@@ -1,15 +1,28 @@
 import Combine
 import UIKit
 
-open class BaseViewController: UIViewController, BoundsProvidable {
+open class BaseViewController<VM: BaseViewModel>: UIViewController, BoundsProvidable {
 
     // MARK: - Properties
+
     private let viewDidLoadSubject = PassthroughSubject<Void, Never>()
     private let viewWillAppearSubject = PassthroughSubject<Void, Never>()
     private let viewDidAppearSubject = PassthroughSubject<Void, Never>()
     private let viewWillDisappearSubject = PassthroughSubject<Void, Never>()
     private let viewDidDisappearSubject = PassthroughSubject<Void, Never>()
     public var bag = Set<AnyCancellable>()
+    public let viewModel: VM
+
+    // MARK: - Init
+
+    public init(viewModel: VM) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required public init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - Lifecycle
 
@@ -55,6 +68,7 @@ open class BaseViewController: UIViewController, BoundsProvidable {
     open func bind() { }
 }
 
+// MARK: - LifecyclePublishable
 extension BaseViewController: LifecyclePublishable {
     public var viewDidLoadPublisher: AnyPublisher<Void, Never> {
         self.viewDidLoadSubject.eraseToAnyPublisher()
