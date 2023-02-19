@@ -23,6 +23,7 @@
 		46A37CD029A1FF7000FE1310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46A37CD229A1FF7000FE1310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46A37CDC29A200FD00FE1310 /* BaseFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BaseFeature; sourceTree = "<group>"; };
+		46A37CDD29A2035500FE1310 /* MainFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MainFeature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 		46A37CDB29A200D600FE1310 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				46A37CDD29A2035500FE1310 /* MainFeature */,
 				46A37CDC29A200FD00FE1310 /* BaseFeature */,
 			);
 			path = Feature;
